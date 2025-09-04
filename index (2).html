@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abesh Patra  | Portfolio</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", cursive, sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      animation: fadeInDown 1.5s ease;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #2c3e50;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .profile-pic {
+      margin-top: 1rem;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      animation: bounce 3s infinite;
+    }
+
+    section {
+      margin: 2rem auto;
+      padding: 1.5rem;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      animation: fadeInUp 1.5s ease;
+    }
+
+    h2 {
+      color: #34495e;
+      border-bottom: 2px solid #6dd5ed;
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "⭐ ";
+      color: #f39c12;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background: #6dd5ed;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      color: #fff;
+      font-weight: bold;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    button:hover {
+      background: #3498db;
+      transform: scale(1.1);
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.8);
+      font-size: 0.9rem;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-15px); }
+      60% { transform: translateY(-8px); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Abesh Patra</h1>
+    <p>8 Years Old | Class: UKG</p>
+    <img src="abesh.jpeg" alt="Animesh Pati" class="profile-pic">
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>Hello! 👋 I’m <b>Abesh Patra</b>. I am 8 years old and I study in Class UKG.  
+    I love playing with my friends, drawing cartoons, and learning fun things with my computer.</p>
+  </section>
+
+  <section>
+    <h2>My Hobbies</h2>
+    <ul>
+      <li>Playing outdoor games ⚽</li>
+      <li>Drawing and coloring 🎨</li>
+      <li>Watching cartoons 📺</li>
+      <li>Exploring computers 💻</li>
+      <li>Watching MMA </li>
+      <li> Fan of Captain America</li>
+      <li>Boxing  💻</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Fun Fact</h2>
+    <p id="funFact">Click the button to see a fun fact about me!</p>
+    <button onclick="showFact()">Show Fun Fact 🎉</button>
+  </section>
+
+  <footer>
+    <p>© 2025 | Made with 💖 by Animesh Pati</p>
+  </footer>
+
+  <script>
+    const facts = [
+      "I can run really fast 🏃💨",
+      "I love chocolate more than candy 🍫🍬",
+      "I know how to ride a bicycle 🚴",
+      "My favorite cartoon is Shinchan 😆",
+      "I want to become a superhero when I grow up 🦸"
+    ];
+
+    function showFact() {
+      const randomFact = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById("funFact").textContent = randomFact;
+    }
+  </script>
+</body>
+</html>
